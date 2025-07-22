@@ -104,6 +104,14 @@ def add_train_args(parser):
     # debug params
     group.add_argument("--do_profile", help="Whether to do profiling", action="store_true")
     group.add_argument("--record_shapes", help="Whether to record tensor shapes for profiling", action="store_true")
+    # ---------- Mixture‑of‑Experts ----------
+    group.add_argument("--moe_num_experts", type=int, default=4,
+                   help="Number of experts per decoder FFN")
+    group.add_argument("--moe_topk", type=int, default=1,
+                   help="How many experts each token is routed to (1 = Switch)")
+    group.add_argument("--moe_gating_temperature", type=float, default=1.0,
+                   help="Softmax temperature for gating")
+
 
     return parser
 

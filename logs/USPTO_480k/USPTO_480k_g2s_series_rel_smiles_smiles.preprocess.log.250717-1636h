@@ -1,0 +1,131 @@
+Logging arguments
+**** model = *g2s_series_rel*
+**** data_name = *USPTO_480k*
+**** task = *reaction_prediction*
+**** representation_end = *smiles*
+**** seed = *42*
+**** max_src_len = *1024*
+**** max_tgt_len = *1024*
+**** num_workers = *8*
+**** verbose = *False*
+**** log_file = *USPTO_480k_g2s_series_rel_smiles_smiles.preprocess.log*
+**** vocab_file = **
+**** preprocess_output_path = *./preprocessed/USPTO_480k_g2s_series_rel_smiles_smiles/*
+**** save_dir = **
+**** train_src = *./data/USPTO_480k/src-train.txt*
+**** train_tgt = *./data/USPTO_480k/tgt-train.txt*
+**** val_src = *./data/USPTO_480k/src-val.txt*
+**** val_tgt = *./data/USPTO_480k/tgt-val.txt*
+**** test_src = *./data/USPTO_480k/src-test.txt*
+**** test_tgt = *./data/USPTO_480k/tgt-test.txt*
+**** representation_start = *smiles*
+**** do_tokenize = *False*
+**** make_vocab_only = *False*
+Making vocab from {'train': [('./data/USPTO_480k/src-train.txt', './data/USPTO_480k/tgt-train.txt')], 'val': [('./data/USPTO_480k/src-val.txt', './data/USPTO_480k/tgt-val.txt')], 'test': [('./data/USPTO_480k/src-test.txt', './data/USPTO_480k/tgt-test.txt')]}
+Saving vocab into ./preprocessed/USPTO_480k_g2s_series_rel_smiles_smiles/vocab_smiles.txt
+Loading vocab from ./preprocessed/USPTO_480k_g2s_series_rel_smiles_smiles/vocab_smiles.txt
+Binarizing (g2s) src ./data/USPTO_480k/src-train.txt and tgt ./data/USPTO_480k/tgt-train.txt, saving to ./preprocessed/USPTO_480k_g2s_series_rel_smiles_smiles/train_0.npz
+Getting seq features
+Processing 10000th SMILES
+Processing 20000th SMILES
+Processing 30000th SMILES
+Processing 40000th SMILES
+Processing 50000th SMILES
+Processing 60000th SMILES
+Processing 70000th SMILES
+Processing 80000th SMILES
+Processing 90000th SMILES
+Processing 100000th SMILES
+Processing 110000th SMILES
+Processing 120000th SMILES
+Processing 130000th SMILES
+Processing 140000th SMILES
+Processing 150000th SMILES
+Processing 160000th SMILES
+Processing 170000th SMILES
+Processing 180000th SMILES
+Processing 190000th SMILES
+Processing 200000th SMILES
+Processing 210000th SMILES
+Processing 220000th SMILES
+Processing 230000th SMILES
+Processing 240000th SMILES
+Processing 250000th SMILES
+Processing 260000th SMILES
+Processing 270000th SMILES
+Processing 280000th SMILES
+Processing 290000th SMILES
+Processing 300000th SMILES
+Processing 310000th SMILES
+Processing 320000th SMILES
+Processing 330000th SMILES
+Processing 340000th SMILES
+Processing 350000th SMILES
+Processing 360000th SMILES
+Processing 370000th SMILES
+Processing 380000th SMILES
+Processing 390000th SMILES
+Processing 400000th SMILES
+Done seq featurization, time: 67.76704597473145. Collating
+Getting graph features
+Processing 10000th SMILES
+Processing 20000th SMILES
+Processing 30000th SMILES
+Processing 40000th SMILES
+Processing 50000th SMILES
+Processing 60000th SMILES
+Processing 70000th SMILES
+Processing 80000th SMILES
+Processing 90000th SMILES
+Processing 100000th SMILES
+Processing 110000th SMILES
+Processing 120000th SMILES
+Processing 130000th SMILES
+Processing 140000th SMILES
+Processing 150000th SMILES
+Processing 160000th SMILES
+Processing 170000th SMILES
+Processing 180000th SMILES
+Processing 190000th SMILES
+Processing 200000th SMILES
+Processing 210000th SMILES
+Processing 220000th SMILES
+Processing 230000th SMILES
+Processing 240000th SMILES
+Processing 250000th SMILES
+Processing 260000th SMILES
+Processing 270000th SMILES
+Processing 280000th SMILES
+Processing 290000th SMILES
+Processing 300000th SMILES
+Processing 310000th SMILES
+Processing 320000th SMILES
+Processing 330000th SMILES
+Processing 340000th SMILES
+Processing 350000th SMILES
+Processing 360000th SMILES
+Processing 370000th SMILES
+Processing 380000th SMILES
+Processing 390000th SMILES
+Processing 400000th SMILES
+Done graph featurization, time: 442.2382986545563. Collating and saving...
+Binarizing (g2s) src ./data/USPTO_480k/src-val.txt and tgt ./data/USPTO_480k/tgt-val.txt, saving to ./preprocessed/USPTO_480k_g2s_series_rel_smiles_smiles/val_0.npz
+Getting seq features
+Processing 10000th SMILES
+Processing 20000th SMILES
+Done seq featurization, time: 6.009594440460205. Collating
+Getting graph features
+Processing 10000th SMILES
+Processing 20000th SMILES
+Done graph featurization, time: 35.18919634819031. Collating and saving...
+Binarizing (g2s) src ./data/USPTO_480k/src-test.txt and tgt ./data/USPTO_480k/tgt-test.txt, saving to ./preprocessed/USPTO_480k_g2s_series_rel_smiles_smiles/test_0.npz
+Getting seq features
+Processing 10000th SMILES
+Processing 20000th SMILES
+Processing 30000th SMILES
+Done seq featurization, time: 7.968185186386108. Collating
+Getting graph features
+Processing 10000th SMILES
+Processing 20000th SMILES
+Processing 30000th SMILES
+Done graph featurization, time: 46.18167567253113. Collating and saving...

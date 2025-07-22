@@ -2,8 +2,8 @@
 
 LOAD_FROM=""
 MODEL=g2s_series_rel
-TASK=reaction_prediction        
-DATASET=USPTO_480k
+TASK=retrosynthesis
+DATASET=USPTO_50k
 MPN_TYPE=dgat
 MAX_REL_POS=4
 ACCUM_COUNT=4
@@ -26,12 +26,6 @@ REPR_START=smiles
 REPR_END=smiles
 
 PREFIX=${DATASET}_${MODEL}_${REPR_START}_${REPR_END}
-
-# ---------- Mixture‑of‑Experts flags ----------
-MOE_NUM_EXPERTS=4               # total experts per decoder FFN
-MOE_TOPK=1                      # Switch‑style routing
-MOE_GATE_TEMP=1.0               # gating softmax temperature
-
 
 
 python train.py \
@@ -86,6 +80,3 @@ python train.py \
   --eval_iter=2000 \
   --save_iter=5000 \
   --compute_graph_distance
-  --moe_num_experts="$MOE_NUM_EXPERTS" \
-  --moe_topk="$MOE_TOPK" \
-  --moe_gating_temperature="$MOE_GATE_TEMP"
